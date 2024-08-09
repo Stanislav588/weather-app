@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kadwa:regular,700"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  </head>
+  <body>
+    <div class="weather">
+      <h1>Weather App</h1>
+      <div class="search-box">
+        <div class="map">
+          <img
+            width="22px"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAgRJREFUaEPtmWtuwkAMhMPJ2p6s7ckKJ2txFUsrlGQ+PxJAIn8ihLOeGY+9CzlNT36dnhz/9CJw7wp2V+B9mqbPgZR9tus83y/z/auLeBeBnytIB0uxfV8Dy0SqBAzAqDgFP8aViFQIZFRfI2gW+8iwzxBwn0ctQ/AZCe8XEp8ao79o5VxQuBLRCnTapsVOEQIdDUvrghs7QoBax2xg8969bHcfl5GJhbChoBkASU6Uo5VE/UAJEPUJeLcQJSHxyQCofgR8hIQcq10EyDpLDaymmrQRSaySZNSnVXh4Arabm0DpPYFUQDUwWWMNoCJgz22uT5IrArLRxO6l1i8TUD1QIaDG6cP3gCIgBwSxkEoiVdqwkLJPCwHSaDLRAgkljD0i1yUVsIWUUijZQIKAlxMIBcxJVSM7NqkYPJpgQWgFiI1GlxgRu0xp/+lp97fAvxdoulECBoZWQYx99DUeDBEC0SogpCtBxIr/j0YIHFUFDD5D4IgqhEQNBQ+NSX5eZiwUUj9TAQe1R0OHwVcI0M0tUoWMG8JNPALq7Ac085fUSLFOHAm2KpGyji9YJeC7bbapS+CrPTCqSg9nt8eNu7/gyJIoK99poSiJNvCdFqLTKT1t1qZARxMvrX37FsdOl6Z86O0L2UT2IuC5vUnLzXp0BYh4LTF7V6AF5NYiLwK7SywS/AHxPmoxv4tpPwAAAABJRU5ErkJggg=="
+          />
+        </div>
+        <input placeholder="Your location" type="text" />
+      </div>
+      <button class="weather-btn">Search</button>
+      <div class="not-found">
+        <div class="box">
+          <img width="320px" src="images/404.png" alt="not-found" />
+          <p>Opss... Location not found!</p>
+        </div>
+      </div>
+      <div class="weather-info">
+        <div class="info-details">
+          <img class="weather-img" src="images/cloud.png" alt="cloud" />
+          <div>
+            <p class="temperature"><span>0</span></p>
+            <p class="description">Broken Clouds</p>
+          </div>
+        </div>
+
+        <div class="container-bottom">
+          <div class="humidity">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAR1JREFUaEPtV9ESgyAMa79s25dt+7K5L+ushx4nchQQmV58hUiTtESZTv7wyesnEOjtIByAA5UKoIUqBayGX88BEREiGojoy8wvi0QjRPfdRtzd7T8MHzjgCPh1v2NEREQL/iRINsPruRYCui8owqn+tDjUAj+fayWwkHCqq/LW4uezJhFq8WvBNoc4U92lQJ0dZh5a4nlUwScRvYUyizisxcwElKWRxENV35qFFvgsAnNRPa9JT8jpmi4iYLxpumxDEq8tRhKHjRhNciRx5tQiiaeWQRKHfYMkTs2S/yVgbqHUS/9lHUmMJK74p0YSZw4ykhhJHGkZJHFqlpDEKYV6rl/vU6KnmiVnw4ES1fbEwIE91Sx5FxwoUW1PzA/8eHFASYiQdAAAAABJRU5ErkJggg=="
+            />
+            <div>
+              <span>0%</span>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="wind">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAfFJREFUaEPtmVtygzAMRa2VtVlZm5WVrsxFHbsDwrauiAWmAz/NFCXR0dXDKBQuftHF/Q83wNkKvqxAjPEzhPAWQnhPME/+S0T8f/drN0CMkR3+Ujx8eoPsAgCdz2wPIpq8pNgLwJHPKaP5NhHRQzPae98MUIn+X6qkmvgQDrmpsAeAi3Pp4CbPCxBuKpgBEKkLKlUBki2nI3cyvvg13MlcANiLOMuwhKW5HUn4SrpJs2YncwEoOIakWUvcKkRXgEU6yCJeOQBGHlKiJOtKeiTnNRuZPjK95rznOZHzfmoAbrrZEQBq9Ev1kepIzptNKnkC/EZVTmGkPrKiSDfrDZCPDBvHF06p3eklAC2fj76vteOuXag3HJJuowPIjqgXce8oWj8vFS6/jWfJ6sRb6la9i9jqr8W+OI2vAoAfJQpT0hIlD1vbYW4AgDxLvvmIoT2ODt2FEDlvACRKnjb/TwGtiIGzvTXg8PNv6YPNc8ABYOmXeZM3GgDDmHZIIwKYdkinF/Grm7zTAdKzr9z2wSqMAiBX9dcCQDd5UBu1NnHNHtksII+Ote9xT6HWOh7d5LWC5A5QWVA1hastuk5JoQSA/J6W/TNN40MUqLRKGdDiJk+rscMAsiPiZ1l1kzccgOaQ9f7hClgd1OxvAC1C3vd/AHRoE0DL8QwGAAAAAElFTkSuQmCC"
+            />
+            <div>
+              <span>20 km/h</span>
+              <p>Wind speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

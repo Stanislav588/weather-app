@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kadwa", sans-serif;
+  background-color: rgb(0, 0, 0);
+}
+
+.weather {
+  position: relative;
+  margin: 100px auto;
+  text-align: center;
+  background-color: rgb(50, 50, 50);
+  width: 450px;
+  padding: 20px;
+  height: 220px;
+  transition: height 0.2s ease;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #f8f8f8;
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+  color: #f8f8f8;
+  height: 35px;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: none;
+}
+input::placeholder {
+  font-size: 20px;
+}
+
+.search-box {
+  outline: none;
+  padding: 5px;
+  border: 2px solid #6d6d6d;
+  border-radius: 15px;
+  color: #6d6d6d;
+}
+.map {
+  position: absolute;
+  left: 36px;
+  top: 96px;
+}
+
+.weather-img {
+  width: 230px;
+
+  transform: translateY(-100%);
+}
+.weather-img.active {
+  width: 230px;
+  transform: translateY(0%);
+}
+
+.weather-info {
+  display: none;
+  transition: height 0.7s ease;
+
+  margin-top: 30px;
+}
+.temperature span {
+  font-size: 50px;
+  font-weight: 600;
+}
+.weather-info p {
+  color: #f8f8f8;
+}
+.description {
+  font-size: 30px;
+}
+.weather-btn {
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  outline: none;
+  color: #f8f8f8;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  margin-top: 20px;
+  padding: 8px 30px;
+  transition: 0.3s ease;
+  background-color: rgb(6, 6, 6);
+}
+
+.weather-btn:hover {
+  background-color: rgb(160, 160, 160);
+  color: black;
+}
+
+.container-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.humidity img,
+.wind img {
+  width: 50px;
+  height: 50px;
+}
+.humidity p,
+.wind p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.humidity span,
+.wind span {
+  color: #f8f8f8;
+  font-size: 22px;
+}
+
+.not-found {
+  display: none;
+  margin-top: 35px;
+}
+
+.not-found.active {
+  visibility: visible;
+  margin-top: 35px;
+}
+.not-found p {
+  color: #f8f8f8;
+  font-weight: 500;
+  font-size: 24px;
+}
